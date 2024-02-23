@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <string>
 using namespace std;
 class Helicoptero
@@ -12,6 +13,7 @@ private:
 public:
 	Helicoptero(string _nombre, string _tipoArma, int _velocidad, double _resistencia, int _municion);
 	virtual double Atacar();
+	virtual void Informacion();
 	string getNombre();
 	string getTipoArma();
 	int getVelocidad();

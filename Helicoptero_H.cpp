@@ -17,10 +17,17 @@ void Helicoptero_H::settipoMisil(string _tipoMisil)
 
 Helicoptero_H::~Helicoptero_H()
 {
+	tipoMisil = "";
 }
 
-double Helicoptero_H::Atacar(string tipoMisil, double _municion, double _velocidad)
+double Helicoptero_H::Atacar()
 {
 	
 	return 0.0;
+}
+
+void Helicoptero_H::Informacion()
+{
+	Helicoptero::Informacion();
+	cout << "Tipo de Misil: " << this->tipoMisil << endl;
 }

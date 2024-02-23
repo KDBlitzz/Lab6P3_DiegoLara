@@ -1,6 +1,8 @@
 #pragma once
 #include "Helicoptero.h"
 #include <vector>
+using namespace std;
+#include <iostream>
 class CampoDeBatalla
 {
 private:
@@ -10,9 +12,9 @@ public:
 	vector<Helicoptero*> getlistaHelicopteros();
 	void setlistaHelicopteros(vector <Helicoptero*> _listaHelicopteros);
 	~CampoDeBatalla();
-	void AgregarHelicoptero(Helicoptero*);
+	void AgregarHelicoptero(Helicoptero* helicoptero);
 	void MostrarInformacion();
-	void SimularBatalla(Helicoptero*, Helicoptero*);
+	void SimularBatalla(Helicoptero* player1, Helicoptero* player2);
 
 };
 

@@ -18,9 +18,16 @@ void Helicoptero_IA::setIACohete(string _IACohete)
 
 Helicoptero_IA::~Helicoptero_IA()
 {
+	IACohete = "";
 }
 
-double Helicoptero_IA::Atacar(string _IACohete, double _municion, double _velocidad)
+double Helicoptero_IA::Atacar()
 {
 	return 0.0;
+}
+
+void Helicoptero_IA::Informacion()
+{
+	Helicoptero::Informacion();
+	cout << "Inteligencia de Cohete: " << this->IACohete << endl;
 }

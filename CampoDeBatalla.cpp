@@ -17,8 +17,33 @@ void CampoDeBatalla::setlistaHelicopteros(vector<Helicoptero*> _listaHelicoptero
 
 CampoDeBatalla::~CampoDeBatalla()
 {
-	for (Helicoptero* heli : listaHelicopteros) {
-		delete heli;
+	for (int i = 0; i < listaHelicopteros.size(); i++)
+	{
+		delete this->listaHelicopteros[i];
+	}
+	this->listaHelicopteros.clear();
+}
+
+void CampoDeBatalla::AgregarHelicoptero(Helicoptero* helicoptero)
+{
+	this->listaHelicopteros.push_back(helicoptero);
+}
+
+void CampoDeBatalla::MostrarInformacion()
+{
+	if (this->listaHelicopteros.empty())
+	{
+		cout << "No hay ningun helicoptero agregado" << endl;
+	}
+	else {
+		int contador = 1;
+		for (int i = 0; i < this->listaHelicopteros.size(); i++) {
+			cout << "---Lista de Helicopteros---" << endl;
+			cout << "Helicoptero: " << contador << endl;
+			this->listaHelicopteros[i]->Informacion();
+			cout << endl;
+			contador++;
+		}
 	}
 }
 

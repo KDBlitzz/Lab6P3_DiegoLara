@@ -9,6 +9,7 @@ public:
 	string gettipoMisil();
 	void settipoMisil(string _tipoMisil);
 	~Helicoptero_H();
-	double Atacar(string tipoMisil,double _municion, double _velocidad);
+	double Atacar();
+	void Informacion();
 };
 

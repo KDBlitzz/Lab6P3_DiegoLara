@@ -9,6 +9,20 @@ Helicoptero::Helicoptero(string _nombre, string _tipoArma, int _velocidad, doubl
 	this->Municion = _municion;
 }
 
+double Helicoptero::Atacar()
+{
+	return 0.0;
+}
+
+void Helicoptero::Informacion()
+{
+	cout << "Nombre: " << this->Nombre << endl;
+	cout << "Tipo de Arma: " << this->TipoArma << endl;
+	cout << "Velocidad: " << this->Velocidad << endl;
+	cout << "Resistencia: " << this->Resistencia << endl;
+	cout << "Municion: " << this->Municion << endl;
+}
+
 string Helicoptero::getNombre()
 {
 	return Nombre;
@@ -61,4 +75,9 @@ void Helicoptero::setMunicion(int _municion)
 
 Helicoptero::~Helicoptero()
 {
+	Nombre = "";
+	TipoArma = "";
+	Velocidad = 0;
+	Resistencia = 0;
+	Municion = 0;
 }
