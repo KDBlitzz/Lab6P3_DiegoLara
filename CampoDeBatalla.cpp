@@ -38,12 +38,23 @@ void CampoDeBatalla::MostrarInformacion()
 	else {
 		int contador = 1;
 		for (int i = 0; i < this->listaHelicopteros.size(); i++) {
-			cout << "---Lista de Helicopteros---" << endl;
 			cout << "Helicoptero: " << contador << endl;
-			this->listaHelicopteros[i]->Informacion();
+			this->listaHelicopteros[i]->toString();
 			cout << endl;
 			contador++;
 		}
+	}
+}
+
+void CampoDeBatalla::SimularBatalla(Helicoptero* player1, Helicoptero* player2)
+{
+	int turno = 0;
+	if (turno % 2 == 0)
+	{
+		turno++;
+	}
+	else {
+		turno++;
 	}
 }
 

@@ -10,6 +10,6 @@ public:
 	void setIACohete(string _IACohete);
 	~Helicoptero_IA();
 	double Atacar();
-	void Informacion();
+	void toString();
 };
 

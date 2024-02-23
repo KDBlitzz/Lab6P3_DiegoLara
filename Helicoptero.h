@@ -13,7 +13,7 @@ private:
 public:
 	Helicoptero(string _nombre, string _tipoArma, int _velocidad, double _resistencia, int _municion);
 	virtual double Atacar();
-	virtual void Informacion();
+	virtual void toString();
 	string getNombre();
 	string getTipoArma();
 	int getVelocidad();

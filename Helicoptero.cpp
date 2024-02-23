@@ -14,12 +14,12 @@ double Helicoptero::Atacar()
 	return 0.0;
 }
 
-void Helicoptero::Informacion()
+void Helicoptero::toString()
 {
 	cout << "Nombre: " << this->Nombre << endl;
 	cout << "Tipo de Arma: " << this->TipoArma << endl;
-	cout << "Velocidad: " << this->Velocidad << endl;
-	cout << "Resistencia: " << this->Resistencia << endl;
+	cout << "Velocidad: " << this->Velocidad << " km/h" << endl;
+	cout << "Resistencia: " << this->Resistencia << "%" << endl;
 	cout << "Municion: " << this->Municion << endl;
 }
 
