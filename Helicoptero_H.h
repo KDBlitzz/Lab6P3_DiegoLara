@@ -1,7 +1,5 @@
 #pragma once
 #include "Helicoptero.h"
-#include <string>
-using namespace std;
 class Helicoptero_H : public Helicoptero
 {
 private:

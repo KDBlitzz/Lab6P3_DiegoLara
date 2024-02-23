@@ -9,10 +9,6 @@ Helicoptero::Helicoptero(string _nombre, string _tipoArma, int _velocidad, doubl
 	this->Municion = _municion;
 }
 
-void Helicoptero::Atacar()
-{
-}
-
 string Helicoptero::getNombre()
 {
 	return Nombre;
@@ -28,7 +24,7 @@ int Helicoptero::getVelocidad()
 	return Velocidad;
 }
 
-int Helicoptero::getResistencia()
+double Helicoptero::getResistencia()
 {
 	return Resistencia;
 }

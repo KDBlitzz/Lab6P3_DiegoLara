@@ -14,3 +14,13 @@ void Helicoptero_H::settipoMisil(string _tipoMisil)
 {
 	tipoMisil = _tipoMisil;
 }
+
+Helicoptero_H::~Helicoptero_H()
+{
+}
+
+double Helicoptero_H::Atacar(string tipoMisil, double _municion, double _velocidad)
+{
+	
+	return 0.0;
+}

@@ -24,12 +24,24 @@
     <ClCompile Include="Helicoptero_H.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Helicoptero_IA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CampoDeBatalla.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helicoptero.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Helicoptero_H.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Helicoptero_IA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CampoDeBatalla.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

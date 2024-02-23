@@ -11,11 +11,11 @@ private:
 	int Municion;
 public:
 	Helicoptero(string _nombre, string _tipoArma, int _velocidad, double _resistencia, int _municion);
-	virtual void Atacar();
+	virtual double Atacar();
 	string getNombre();
 	string getTipoArma();
 	int getVelocidad();
-	int getResistencia();
+	double getResistencia();
 	int getMunicion();
 	void setNombre(string _nombre);
 	void setTipoArma(string _tipoArma);
