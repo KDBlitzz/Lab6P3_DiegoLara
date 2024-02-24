@@ -23,20 +23,28 @@ Helicoptero_IA::~Helicoptero_IA()
 
 double Helicoptero_IA::Atacar()
 {
+	double conversionTemp = 0;
+	double conversionConBase = 0;
 	double factorVelocidad = 0;
 	factorVelocidad = 1.0 + (this->getVelocidad() / 100.0);
 	double total = 0;
 	if (IACohete == "Principiante")
 	{
-		total = (5 + (10 * 2)) * factorVelocidad;
+		conversionTemp = 10 * 2;
+		conversionConBase = conversionTemp + 5;
+		total = conversionConBase * factorVelocidad;
 		return total;
 	}
 	else if (IACohete == "Intermedio") {
-		total = (5 + (15 * 2)) * factorVelocidad;
+		conversionTemp = 15 * 2;
+		conversionConBase = conversionTemp + 5;
+		total = conversionConBase * factorVelocidad;
 		return total;
 	}
 	else if (IACohete == "Avanzado") {
-		total = (5 + (20 * 2)) * factorVelocidad;
+		conversionTemp = 20 * 2;
+		conversionConBase = conversionTemp + 5;
+		total = conversionConBase * factorVelocidad;
 		return total;
 	}
 }

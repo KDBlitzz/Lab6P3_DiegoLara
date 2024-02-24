@@ -12,6 +12,7 @@ void ejercicio_1() {
 	bool ejercicio_1 = true;
 	int opcion = 0;
 	while (ejercicio_1) {
+		bool victoria = true;
 		string nombre = "";
 		int velocidad = 0;
 		int municion = 0;
@@ -19,6 +20,8 @@ void ejercicio_1() {
 		int select = 0;
 		int selectMisile = 0;
 		int selectDifficulty = 0;
+		int player1 = 0;
+		int player2 = 0;
 		cout << "**Simulación de Batalla de Helicópteros**" << endl << endl;
 		cout << "1. Agregar Helicópteros" << endl;
 		cout << "2. Mostrar Información de Helicópteros" << endl;
@@ -41,7 +44,7 @@ void ejercicio_1() {
 					cout << "Ingrese una velocidad entre 100 y 400: " << endl;
 					cin >> velocidad;
 				}
-				
+
 				cout << "Munición: "; cin >> municion; cout << endl;
 				while (municion < 5 || municion >= 31) {
 					cout << "Ingrese una municion entre 5 y 30: " << endl;
@@ -136,12 +139,38 @@ void ejercicio_1() {
 			administracion->MostrarInformacion();
 			break;
 		case 3:
+			if (administracion->getlistaHelicopteros().size() < 2)
+			{
+				cout << "No hay mas de 2 helicópteros para la simulación" << endl;
+			}
+			else {
+				administracion->MostrarInformacion();
+				cout << "**Seleccione el primer Helicóptero para la batalla (posición en la lista): "; cin >> player1; cout << endl << endl;
+				cout << "**Seleccione el segundo Helicóptero para la batalla (posición en la lista): "; cin >> player2; cout << endl << endl;
+				cout << "**Simulación de Batalla**" << endl << endl;
+				player1 = player1 - 1;
+				player2 = player2 - 1;
+				administracion->SimularBatalla(administracion->getlistaHelicopteros()[player1], administracion->getlistaHelicopteros()[player2]);
+			}
+
 			break;
 		case 4:
 			ejercicio_1 = false;
 			break;
 		default:
 			cout << "Opción Invalida" << endl;
+		}
+
+		if (!ejercicio_1)
+		{
+			for (int i = 0; i < listaDeHelicopteros.size(); i++)
+			{
+				delete listaDeHelicopteros[i];
+			}
+			listaDeHelicopteros.clear();
+			delete administracion;
+			delete nuevoHelicoptero;
+			delete nuevoHelicopteroIA;
 		}
 	}
 }

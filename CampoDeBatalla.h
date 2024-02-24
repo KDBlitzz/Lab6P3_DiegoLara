@@ -14,7 +14,7 @@ public:
 	~CampoDeBatalla();
 	void AgregarHelicoptero(Helicoptero* helicoptero);
 	void MostrarInformacion();
-	void SimularBatalla(Helicoptero* player1, Helicoptero* player2);
+	void SimularBatalla(Helicoptero* humano, Helicoptero* IA);
 
 };
 
