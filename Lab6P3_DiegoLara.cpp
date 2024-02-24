@@ -7,8 +7,8 @@
 void ejercicio_1() {
 	vector <Helicoptero*> listaDeHelicopteros;
 	CampoDeBatalla* administracion = new CampoDeBatalla(listaDeHelicopteros);
-	Helicoptero_H* nuevoHelicoptero;
-	Helicoptero_IA* nuevoHelicopteroIA;
+	Helicoptero_H* nuevoHelicoptero = nullptr;
+	Helicoptero_IA* nuevoHelicopteroIA = nullptr;
 	bool ejercicio_1 = true;
 	int opcion = 0;
 	while (ejercicio_1) {
@@ -161,17 +161,17 @@ void ejercicio_1() {
 			cout << "Opción Invalida" << endl;
 		}
 
-		if (!ejercicio_1)
+	}
+	if (!ejercicio_1)
+	{
+		for (int i = 0; i < listaDeHelicopteros.size(); i++)
 		{
-			for (int i = 0; i < listaDeHelicopteros.size(); i++)
-			{
-				delete listaDeHelicopteros[i];
-			}
-			listaDeHelicopteros.clear();
-			delete administracion;
-			delete nuevoHelicoptero;
-			delete nuevoHelicopteroIA;
+			delete listaDeHelicopteros[i];
 		}
+		listaDeHelicopteros.clear();
+		delete administracion;
+		delete nuevoHelicoptero;
+		delete nuevoHelicopteroIA;
 	}
 }
 void menu() {
