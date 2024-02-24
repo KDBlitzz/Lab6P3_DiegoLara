@@ -170,8 +170,8 @@ void ejercicio_1() {
 		}
 		listaDeHelicopteros.clear();
 		delete administracion;
-		delete nuevoHelicoptero;
-		delete nuevoHelicopteroIA;
+		//delete nuevoHelicoptero;
+		//delete nuevoHelicopteroIA;
 	}
 }
 void menu() {

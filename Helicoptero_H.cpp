@@ -25,25 +25,26 @@ double Helicoptero_H::Atacar()
 	double conversionTemp = 0;
 	double conversionConBase = 0;
 	double factorVelocidad = 0;
-	factorVelocidad = 1.0 + (this->getVelocidad() / 100.0);
+	factorVelocidad = this->getVelocidad() / 100.0;
+	double TotalVelocidad = 1.0 + factorVelocidad;
 	double total = 0;
 	if (tipoMisil == "Anti-Bombas")
 	{
 		conversionTemp = 20 * 5;
 		conversionConBase = conversionTemp + 10;
-		total = conversionConBase * factorVelocidad;
+		total = conversionConBase / TotalVelocidad;
 		return total;
 	}
 	else if (tipoMisil == "Fulminante") {
 		conversionTemp = 30 * 5;
 		conversionConBase = conversionTemp + 10;
-		total = conversionConBase * factorVelocidad;
+		total = conversionConBase / TotalVelocidad;
 		return total;
 	}
 	else if(tipoMisil == "Reforzado"){
 		conversionTemp = 40 * 5;
 		conversionConBase = conversionTemp + 10;
-		total = conversionConBase * factorVelocidad;
+		total = conversionConBase / TotalVelocidad;
 		return total;
 	}
 	
