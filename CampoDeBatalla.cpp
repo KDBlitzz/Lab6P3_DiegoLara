@@ -53,7 +53,7 @@ void CampoDeBatalla::SimularBatalla(Helicoptero* humano, Helicoptero* IA)
 	while (victoria) {
 		if (turno % 2 == 0)
 		{
-			cout << "\n**Turno " << turno + 1 << ":**" << endl << endl;
+			cout << "\n\n**Turno " << turno + 1 << ":**" << endl << endl;
 			IA->setResistencia(IA->getResistencia() - humano->Atacar());
 			humano->setMunicion(humano->getMunicion() - 5);
 			humano->setVelocidad(humano->getVelocidad() - 10);
@@ -63,7 +63,7 @@ void CampoDeBatalla::SimularBatalla(Helicoptero* humano, Helicoptero* IA)
 			turno++;
 		}
 		else {
-			cout << "\n**Turno " << turno + 1 << ":**" << endl << endl;
+			cout << "\n\n**Turno " << turno + 1 << ":**" << endl << endl;
 			humano->setResistencia(humano->getResistencia() - IA->Atacar());
 			IA->setMunicion(IA->getMunicion() - 2);
 			IA->setVelocidad(IA->getVelocidad() - 8);
