@@ -48,6 +48,7 @@ void CampoDeBatalla::MostrarInformacion()
 
 void CampoDeBatalla::SimularBatalla(Helicoptero* humano, Helicoptero* IA)
 {
+	// Metodo para simular la batalla entre los helicopteros
 	bool victoria = true;
 	int turno = 0;
 	while (victoria) {

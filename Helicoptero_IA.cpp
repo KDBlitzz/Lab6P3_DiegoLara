@@ -23,6 +23,7 @@ Helicoptero_IA::~Helicoptero_IA()
 
 double Helicoptero_IA::Atacar()
 {
+	// metodo para que la IA ataque
 	double conversionTemp = 0;
 	double conversionConBase = 0;
 	double factorVelocidad = 0;

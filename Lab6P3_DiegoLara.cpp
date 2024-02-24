@@ -4,7 +4,8 @@
 #include "Helicoptero_IA.h"
 #include "CampoDeBatalla.h"
 #include <locale>
-void ejercicio_1() {
+void ejercicio_1() { 
+	// variables y punteros a usar
 	vector <Helicoptero*> listaDeHelicopteros;
 	CampoDeBatalla* administracion = new CampoDeBatalla(listaDeHelicopteros);
 	Helicoptero_H* nuevoHelicoptero = nullptr;
@@ -62,6 +63,7 @@ void ejercicio_1() {
 				cin >> selectMisile;
 				switch (selectMisile) {
 				case 1:
+					// creacion de helicopteros
 					nuevoHelicoptero = new Helicoptero_H(nombre, "Misil", velocidad, resistencia, municion, "Anti-Bombas");
 					cout << "**Helicóptero Creado**" << endl << endl;
 					administracion->AgregarHelicoptero(nuevoHelicoptero);
@@ -84,6 +86,7 @@ void ejercicio_1() {
 				}
 				break;
 			case 2:
+				// Mostrar los helicopteros
 				cout << "\n**Ingrese los datos del Helicóptero IA:**" << endl << endl;
 				cout << "Nombre: "; cin >> nombre; cout << endl;
 				cout << "Velocidad(km/h): "; cin >> velocidad; cout << endl;
@@ -139,6 +142,7 @@ void ejercicio_1() {
 			administracion->MostrarInformacion();
 			break;
 		case 3:
+			// Simulacion de batalla entre 2 helicopteros
 			if (administracion->getlistaHelicopteros().size() < 2)
 			{
 				cout << "No hay mas de 2 helicópteros para la simulación" << endl;
@@ -163,7 +167,7 @@ void ejercicio_1() {
 
 	}
 	if (!ejercicio_1)
-	{
+	{ // borrar memoria
 		for (int i = 0; i < listaDeHelicopteros.size(); i++)
 		{
 			delete listaDeHelicopteros[i];

@@ -22,6 +22,7 @@ Helicoptero_H::~Helicoptero_H()
 
 double Helicoptero_H::Atacar()
 {
+	// metodo para que el humano ataque
 	double conversionTemp = 0;
 	double conversionConBase = 0;
 	double factorVelocidad = 0;
